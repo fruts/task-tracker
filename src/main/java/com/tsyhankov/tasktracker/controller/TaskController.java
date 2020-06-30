@@ -1,7 +1,6 @@
 package com.tsyhankov.tasktracker.controller;
 
 import com.tsyhankov.tasktracker.entity.Task;
-import com.tsyhankov.tasktracker.service.StatusService;
 import com.tsyhankov.tasktracker.service.TaskService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +17,6 @@ public class TaskController {
 
     @Autowired
     private TaskService taskService;
-
-    @Autowired
-    private StatusService statusService;
 
     @PostMapping("/tasks/add")
     public Task addTask(@RequestBody Task task) {
